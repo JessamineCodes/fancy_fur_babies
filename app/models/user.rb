@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :costumes
   has_many :bookings
   validates :email, presence: true, uniqueness: true
-  validates :first_name, :last_name, presence: true
+  # validates :first_name, :last_name, presence: true
 end

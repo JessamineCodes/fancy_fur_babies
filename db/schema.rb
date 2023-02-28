@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_02_28_133752) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_133752) do
     t.string "product_name"
     t.string "img"
     t.text "details"
-    t.decimal "price"
+    t.float "price"
     t.string "pet_type"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
