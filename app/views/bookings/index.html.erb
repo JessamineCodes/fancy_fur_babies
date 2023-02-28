@@ -13,7 +13,7 @@
 <ul>
   <% @bookings.each do |booking| %>
     <% if booking.user_id == current_user.id  %>
-        <li><%= booking.costume.product_name %> |
+        <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> |
         <%= booking.start_date %> to <%= booking.end_date %> |
         <%= link_to "Delete", booking_path(booking), data:{turbo_method: "delete"} %></li>
     <% end %>
