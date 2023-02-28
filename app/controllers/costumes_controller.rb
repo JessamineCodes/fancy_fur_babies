@@ -36,6 +36,11 @@ class CostumesController < ApplicationController
     end
   end
 
+  def my_costumes
+    @costumes = Costume.all
+    @bookings = Booking.all
+  end
+
   def destroy
     @costume = Costume.find(params[:id])
     @costume.destroy
