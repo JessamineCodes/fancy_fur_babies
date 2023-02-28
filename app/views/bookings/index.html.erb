@@ -1,21 +1,13 @@
 <h1>Bookings</h1>
-<p>See the bookings!</p>
+<p>See the bookings you've made!</p>
 
-<h2>My costumes I'm renting out...</h2>
-
-<ul>
-<% @costumes.each do |costume| %>
-  <li><%= link_to costume.product_name, costume_path(costume) if costume.user_id == current_user.id  %></li>
-<% end %>
-</ul>
-
-<h2>Costumes I'm renting from others...</h2>
 <ul>
   <% @bookings.each do |booking| %>
     <% if booking.user_id == current_user.id  %>
         <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> |
-        <%= booking.start_date %> to <%= booking.end_date %> |
-        <%= link_to "Delete", booking_path(booking), data:{turbo_method: "delete"} %></li>
+        <%= booking.start_date %> to <%= booking.end_date %></li>
     <% end %>
   <% end %>
 </ul>
+
+<%= link_to "Back to all costumes", costumes_path %>
