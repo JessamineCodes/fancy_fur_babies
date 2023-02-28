@@ -1,0 +1,21 @@
+<h1>Bookings</h1>
+<p>See the bookings!</p>
+
+<h2>My costumes I'm renting out...</h2>
+
+<ul>
+<% @costumes.each do |costume| %>
+<li><%=  costume.product_name if costume.user_id == current_user.id  %></li>
+<% end %>
+</ul>
+
+<h2>Costumes I'm renting from others...</h2>
+<ul>
+  <% @bookings.each do |booking| %>
+    <% if booking.user_id == current_user.id  %>
+        <li><%= booking.costume.product_name %> |
+        <%= booking.start_date %> to <%= booking.end_date %> |
+        <%= link_to "Delete", booking_path(booking), data:{turbo_method: "delete"} %></li>
+    <% end %>
+  <% end %>
+</ul>
