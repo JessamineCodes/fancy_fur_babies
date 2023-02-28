@@ -15,8 +15,7 @@ class CostumesController < ApplicationController
   def create
     @costume = Costume.new(costume_params)
     @costume.user_id = current_user.id
-    # raise
-    # @costume.user_id =
+
     if @costume.save
       redirect_to costumes_path
     else
@@ -30,7 +29,6 @@ class CostumesController < ApplicationController
 
   def update
     @costume = Costume.find(params[:id])
-    # raise
     if @costume.update(costume_params)
       redirect_to costumes_path
     else
