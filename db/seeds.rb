@@ -3,13 +3,98 @@ Costume.destroy_all
 User.destroy_all
 
 puts "creating database..."
-user1 = User.create(email: "issy@gmail.com", password:"123456")
+user1 = User.create(email: "issy@gmail.com", password: "123456")
+user2 = User.create(email: "kat@gmail.com", password: "123456")
+user3 = User.create(email: "jess@gmail.com", password: "123456")
+user4 = User.create(email: "zac@gmail.com", password: "123456")
+
 Costume.create(
   product_name: "Tophat",
-  img: "data:image/jpeg;base64,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",
+  img: "https://www.warrenphotographic.co.uk/photography/bigs/38507-Saint-Bernard-puppy-wearing-a-top-hat-white-background.jpg",
   details: "very classy hat",
-  price: 65.0,
+  price: 12.0,
   pet_type: "dog",
+  user: user1
+)
+
+Costume.create(
+  product_name: "Maine",
+  img: "https://i.etsystatic.com/37139338/c/800/635/0/17/il/36321c/4388690006/il_340x270.4388690006_e0t9.jpg",
+  details: "super fluffy - very lion-esk",
+  price: 6.5,
+  pet_type: "cat",
+  user: user2
+)
+
+Costume.create(
+  product_name: "Bat wings",
+  img: "https://i.pinimg.com/236x/63/69/bd/6369bde0d2b1a691a351517c2a8d42b9.jpg",
+  details: "very stylish - give your cat wings!",
+  price: 4.0,
+  pet_type: "cat",
+  user: user2
+)
+
+Costume.create(
+  product_name: "Bow-tie",
+  img: "https://cdn.shopify.com/s/files/1/0048/4356/9201/products/plaid-bowtie-cotton-collar-for-cats-black-white-729437.jpg?v=1629118270",
+  details: "look snazzy- wear a bowtie!",
+  price: 2.50,
+  pet_type: "cat",
+  user: user2
+)
+
+Costume.create(
+  product_name: "Bow-tie",
+  img: "https://media.istockphoto.com/id/1206195505/photo/cute-young-small-white-dog-wearing-a-modern-bowtie-sitting-on-the-wood-floor-and-looking-at.jpg?s=612x612&w=0&k=20&c=td2SUPpXGjvS-zw13BY3rb8vGzh21VsofYu052Z4V6I=",
+  details: "classy bowtie",
+  price: 3.0,
+  pet_type: "dog",
+  user: user1
+)
+
+Costume.create(
+  product_name: "tux",
+  img: "https://i.etsystatic.com/10768173/r/il/fa261d/3066117548/il_570xN.3066117548_pmig.jpg",
+  details: "perfect addition to any black-tie event",
+  price: 15.0,
+  pet_type: "dog",
+  user: user3
+)
+
+Costume.create(
+  product_name: "sunglasses",
+  img: "https://img.ltwebstatic.com/images3_pi/2022/07/28/16589719026b31893fa9231b091d7de48351b81783_thumbnail_900x.webp",
+  details: "suns out - glasses out!",
+  price: 1.50,
+  pet_type: "hamster",
+  user: user4
+)
+
+Costume.create(
+  product_name: "gold chain",
+  img: "https://m.media-amazon.com/images/I/61tGy3Bd47L._AC_SX425_.jpg",
+  details: "very shiny",
+  price: 3.50,
+  pet_type: "reptile",
+  user: user4
+)
+
+Costume.create(
+  product_name: "funky shirt",
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7S61W3afU-WhlVQavyqK2l3sMNqQ72rMEjA&usqp=CAU",
+  details: "be the life of the party in your pet's very own party shirt",
+  price: 4.50,
+  pet_type: "dog",
+  user: user3
+)
+
+Costume.create(
+  product_name: "mermaid outfit",
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTycy7N8di3a1xPqYpXckuL96M9stpr6G71UVM9eHg-oF_v35R7DLrLE-jujLCGVgZX1I4&usqp=CAU",
+  details: "Ariel who?! Be the mermaid you were born to be!",
+  price: 8.50,
+  pet_type: "cat",
   user: user1
 )
 
