@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :costumes, only: [:index, :new, :create, :edit, :update] do
+  resources :costumes do
     resources :bookings, only: [:index, :create]
   end
 
