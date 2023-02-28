@@ -1,0 +1,18 @@
+<h1><%= @costume.product_name %></h1>
+
+<img src=<%= @costume.img %>>
+<p>Price: <%= @costume.price %></p>
+<p>For your lil <%= @costume.pet_type %></p>
+
+<h3>More info</h3>
+<p><%= @costume.details %></p>
+
+<div id="booking-box">
+  <h2>Book this sweet costume!</h2>
+  <%= simple_form_for [@costume, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :message%>
+    <%= f.submit :message%>
+  <% end %>
+</div>
