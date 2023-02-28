@@ -3,6 +3,11 @@ class CostumesController < ApplicationController
     @costumes = Costume.all
   end
 
+  def show
+    @costume = Costume.find(params[:id])
+    @booking = Booking.new
+  end
+
   def new
     @costume = Costume.new
   end
