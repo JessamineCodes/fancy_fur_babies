@@ -3,10 +3,10 @@ Costume.destroy_all
 User.destroy_all
 
 puts "creating database..."
-user1 = User.create(email: "issy@gmail.com", password: "123456")
-user2 = User.create(email: "kat@gmail.com", password: "123456")
-user3 = User.create(email: "jess@gmail.com", password: "123456")
-user4 = User.create(email: "zac@gmail.com", password: "123456")
+user1 = User.create(email: "issy@gmail.com", first_name: "Issy", last_name: "McCallion", address: "London", password: "123456")
+user2 = User.create(email: "kat@gmail.com", first_name: "Kat", last_name: "Conios", address: "London", password: "123456")
+user3 = User.create(email: "jess@gmail.com", first_name: "Jess", last_name: "McHugh", address: "London", password: "123456")
+user4 = User.create(email: "zac@gmail.com", first_name: "Zac", last_name: "Nation", address: "London", password: "123456")
 
 Costume.create(
   product_name: "Tophat",
