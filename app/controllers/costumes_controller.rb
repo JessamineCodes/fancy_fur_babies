@@ -3,6 +3,11 @@ class CostumesController < ApplicationController
     @costumes = Costume.all
   end
 
+  def show
+    @costume = Costume.find(params[:id])
+    @booking = Booking.new
+  end
+
   def new
     @costume = Costume.new
   end
@@ -10,8 +15,7 @@ class CostumesController < ApplicationController
   def create
     @costume = Costume.new(costume_params)
     @costume.user_id = current_user.id
-    # raise
-    # @costume.user_id =
+
     if @costume.save
       redirect_to costumes_path
     else
@@ -25,14 +29,19 @@ class CostumesController < ApplicationController
 
   def update
     @costume = Costume.find(params[:id])
-    # raise
     if @costume.update(costume_params)
       redirect_to costumes_path
     else
       render :edit, status: :unprocessable_entity
     end
-
   end
+
+  def destroy
+    @costume = Costume.find(params[:id])
+    @costume.destroy
+    redirect_to costumes_path, status: :see_other
+  end
+
   private
 
   def costume_params
