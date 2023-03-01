@@ -1,2 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
