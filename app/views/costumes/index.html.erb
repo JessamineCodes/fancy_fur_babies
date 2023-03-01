@@ -2,7 +2,7 @@
 <p>View our full range of fancy finery for your fabulous fur baby...</p>
 <ul>
 <% @costumes.each do |costume| %>
-<li><%= costume.product_name%> | <%= link_to "Edit", edit_costume_path(costume) %></li>
+<li><%= link_to costume.product_name, costume_path(costume)%> | <%= link_to "Edit", edit_costume_path(costume) %></li>
 <% end %>
 </ul>
 
