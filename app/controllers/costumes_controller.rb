@@ -30,7 +30,7 @@ class CostumesController < ApplicationController
   def update
     @costume = Costume.find(params[:id])
     if @costume.update(costume_params)
-      redirect_to costumes_path
+      redirect_to costume_path(@costume)
     else
       render :edit, status: :unprocessable_entity
     end
