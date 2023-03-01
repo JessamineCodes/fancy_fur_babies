@@ -30,7 +30,7 @@ class CostumesController < ApplicationController
   def update
     @costume = Costume.find(params[:id])
     if @costume.update(costume_params)
-      redirect_to costume_path(@costume)
+      redirect_to my_costumes_costumes_path
     else
       render :edit, status: :unprocessable_entity
     end
@@ -44,7 +44,7 @@ class CostumesController < ApplicationController
   def destroy
     @costume = Costume.find(params[:id])
     @costume.destroy
-    redirect_to costumes_path, status: :see_other
+    redirect_to my_costumes_costumes_path, status: :see_other
   end
 
   private
