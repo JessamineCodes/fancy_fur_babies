@@ -33,6 +33,7 @@
                   <%= link_to "All Costumes", costumes_path, class: "dropdown-item" %>
                   <%= link_to "Manage My Costumes", my_costumes_costumes_path, class: "dropdown-item" %>
                   <%= link_to "Manage my bookings", bookings_index_path, class: "dropdown-item" %>
+                  <%= link_to "My profile", user_path(current_user), class: "dropdown-item" %>
                   <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
                 </div>
               </li>
