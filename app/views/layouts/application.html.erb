@@ -14,38 +14,39 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "Title-for-navbar-FFB" %>
-    <% end %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-FFB">
+      <div class="container-fluid">
+        <%= link_to "root_path", class: "navbar-brand" do %>
+          <%= image_tag "Logo" %>
+        <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item dropdown">
-            <%= image_tag "navbar-logo-FFB", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "All Costumes", costumes_path, class: "dropdown-item" %>
-              <%= link_to "Manage My Costumes", my_costumes_costumes_path, class: "dropdown-item" %>
-              <%= link_to "Manage my bookings", bookings_index_path, class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
-      </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <% if user_signed_in? %>
+              <li class="nav-item dropdown">
+                <%= image_tag "menu-icon-ffb", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "All Costumes", costumes_path, class: "dropdown-item" %>
+                  <%= link_to "Manage My Costumes", my_costumes_costumes_path, class: "dropdown-item" %>
+                  <%= link_to "Manage my bookings", bookings_index_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+                </div>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
+    <div id="space-below-navbar">
+    </div>
     <%= yield %>
   </body>
 </html>

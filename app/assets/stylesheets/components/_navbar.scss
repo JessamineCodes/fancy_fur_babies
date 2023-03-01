@@ -1,12 +1,23 @@
-.navbar-lewagon {
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-FFB {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-FFB .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 150px;
+.navbar-FFB .navbar-brand img {
+  width: 300px;
+}
+
+#space-below-navbar {
+  height: 119.5px;
+  width: 100%
 }
