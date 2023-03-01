@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
-    @costumes = Costume.all
   end
 
   def create
