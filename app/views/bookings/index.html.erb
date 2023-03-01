@@ -5,7 +5,7 @@
   <% @bookings.each do |booking| %>
     <% if booking.user_id == current_user.id  %>
         <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> |
-        <%= booking.start_date %> to <%= booking.end_date %></li>
+        <%= booking.start_date %> to <%= booking.end_date %> | <%= link_to "Cancel", booking_path(booking), data:{turbo_method: "delete", confirm: "Are you sure?"}%></li>
     <% end %>
   <% end %>
 </ul>

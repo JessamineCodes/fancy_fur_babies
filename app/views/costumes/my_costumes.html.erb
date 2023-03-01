@@ -20,7 +20,7 @@
   <ul>
     <% @bookings.each do |booking| %>
       <% if booking.costume.user_id == current_user.id  %>
-          <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> | <%= booking.start_date %> to <%= booking.end_date %> | Booked by <%= booking.user.first_name %></li>
+          <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> | <%= booking.start_date %> to <%= booking.end_date %> | Booked by <%= booking.user.first_name %> |  Message: "<%= booking.message %>"</li>
       <% end %>
     <% end %>
   </ul>
