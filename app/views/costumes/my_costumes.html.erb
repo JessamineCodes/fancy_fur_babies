@@ -5,7 +5,9 @@
 <h2>My listed costumes</h2>
 <ul>
 <% @costumes.each do |costume| %>
-  <li><%= link_to costume.product_name, costume_path(costume) if costume.user_id == current_user.id  %></li>
+  <% if costume.user_id == current_user.id  %>
+    <li><%= link_to costume.product_name, costume_path(costume)  %></li>
+  <% end %>
 <% end %>
 </ul>
 
