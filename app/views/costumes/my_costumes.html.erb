@@ -6,7 +6,7 @@
 <ul>
 <% @costumes.each do |costume| %>
   <% if costume.user_id == current_user.id  %>
-    <li><%= link_to costume.product_name, costume_path(costume)  %></li>
+    <li><%= link_to costume.product_name, costume_path(costume)  %> | <%= link_to "Delete", costume_path(costume), data:{turbo_method: "delete"} %></li>
   <% end %>
 <% end %>
 </ul>
