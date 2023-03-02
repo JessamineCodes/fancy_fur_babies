@@ -1,10 +1,10 @@
 <h1>Bookings</h1>
 <p>See the bookings you've made!</p>
 
-
+<div class="row">
   <% @bookings.each do |booking| %>
     <% if booking.user_id == current_user.id  %>
-      <div class="booking-card">
+      <div class="booking-card col-4">
         <div class="booking-card-img">
           <%= cl_image_tag booking.costume.photo.key %>
         </div>
@@ -15,5 +15,5 @@
       </div>
     <% end %>
   <% end %>
-
+</div>
 <%= link_to "Back to all costumes", costumes_path, class: "button" %>

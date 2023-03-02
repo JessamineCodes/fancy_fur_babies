@@ -4,6 +4,7 @@
   width: 100%;
   align-items: center;
   z-index: 1000;
+  color: #735D78
 }
 
 .navbar-FFB {
@@ -23,4 +24,15 @@
 #space-below-navbar {
   height: 105.4px;
   width: 100%
+}
+
+.nav-btn {
+color: #735D78;
+border-radius: 10px;
+padding: 8px;
+margin: 12px 4px 4px;
+}
+
+.dropdown-toggle {
+  margin-left: 16px;
 }
