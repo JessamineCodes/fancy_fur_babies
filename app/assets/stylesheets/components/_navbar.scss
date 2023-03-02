@@ -2,9 +2,11 @@
   position: fixed;
   top: 0;
   width: 100%;
+  align-items: center;
 }
 
 .navbar-FFB {
+  display: flex;
   justify-content: space-between;
   background: white;
 }

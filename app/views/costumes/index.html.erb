@@ -7,10 +7,6 @@
 </style>
 
 
-<%= link_to "List a new costume", new_costume_path %> |
-<%= link_to "Manage my costumes", my_costumes_costumes_path %> |
-<%= link_to "See my bookings", bookings_index_path %>
-
 <%= form_with url: costumes_path, method: :get, class: "d-flex search-bar" do %>
   <%= text_field_tag :query,
     params[:query],
