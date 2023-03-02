@@ -1,10 +1,10 @@
 require "open-uri"
 
-puts "cleaning database..."
+puts "Cleaning database..."
 Costume.destroy_all
 User.destroy_all
 
-puts "creating database..."
+puts "Creating database..."
 user1 = User.create!(email: "issy@gmail.com", first_name: "Issy", last_name: "McCallion", address: "London", password: "123456")
 user2 = User.create(email: "kat@gmail.com", first_name: "Kat", last_name: "Conios", address: "London", password: "123456")
 user3 = User.create(email: "jess@gmail.com", first_name: "Jess", last_name: "McHugh", address: "London", password: "123456")
@@ -15,11 +15,10 @@ puts "Creating costumes..."
 costume1 = Costume.new(
   product_name: "Top Hat",
   details: "A very classy hat.",
-  price: 12.0,
+  price: 12.00,
   pet_type: "dog",
   user: user1
 )
-puts "attaching img"
 img1 = URI.open("https://www.warrenphotographic.co.uk/photography/bigs/38507-Saint-Bernard-puppy-wearing-a-top-hat-white-background.jpg")
 costume1.photo.attach(io: img1, filename: "dog-top-hat.jpg", content_type: "image/jpg")
 costume1.save
@@ -27,7 +26,7 @@ costume1.save
 costume2 = Costume.new(
   product_name: "Bat Wings",
   details: "Very stylish - give your cat wings!",
-  price: 4.0,
+  price: 4.00,
   pet_type: "cat",
   user: user2
 )
@@ -49,7 +48,7 @@ costume3.save
 costume4= Costume.new(
   product_name: "Bow Tie for Dog",
   details: "Classy bowtie",
-  price: 3.0,
+  price: 3.00,
   pet_type: "dog",
   user: user1)
 img4 = URI.open("https://media.istockphoto.com/id/1206195505/photo/cute-young-small-white-dog-wearing-a-modern-bowtie-sitting-on-the-wood-floor-and-looking-at.jpg?s=612x612&w=0&k=20&c=td2SUPpXGjvS-zw13BY3rb8vGzh21VsofYu052Z4V6I=")
@@ -59,7 +58,7 @@ costume4.save
 costume5 = Costume.new(
   product_name: "Tuxedo",
   details: "Needed for any black-tie event",
-  price: 15.0,
+  price: 15.00,
   pet_type: "dog",
   user: user3
 )
@@ -92,8 +91,8 @@ costume7.save
 
 
 costume8 = Costume.new(
-  product_name: "funky shirt",
-  details: "be the life of the party in your pet's very own party shirt",
+  product_name: "Funky Shirt",
+  details: "Be the life of the party in your pet's very own party shirt",
   price: 4.50,
   pet_type: "dog",
   user: user3
@@ -125,26 +124,25 @@ costume10.photo.attach(io: img10, filename: "leia_cat.jpg", content_type: "image
 costume10.save
 
 costume11 = Costume.new(
-  product_name: "Wizard Hat for Hamster",
+  product_name: "Witch Hat for Hamster",
   details: "Abracadabra! Have a magical time in this wizard hat...",
   price: 12.50,
   pet_type: "small mammal",
   user: user4
 )
-img11 = URI.open("https://i.ebayimg.com/images/g/WIwAAOSwA5Vix-OX/s-l300.jpg")
+img11 = URI.open("https://m.media-amazon.com/images/I/71x3KUbr-AL._AC_SX425_.jpg")
 costume11.photo.attach(io: img11, filename: "wizard-hamster.jpg", content_type: "image/jpg")
 costume11.save
 
 costume12 = Costume.new(
-  product_name: "Spiffy Suit",
-  details: "A teeny tiny suit for your best feathered friend",
-  price: 12.50,
+  product_name: "Bee Costume",
+  details: "Your budgy will be buzzzzzzing in this spiffy outfit.",
+  price: 9.99,
   pet_type: "bird",
   user: user1
 )
-img12 = URI.open("https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRPRf8PY7B71DriHjf1FWcarnBJ9iCDJvyzkR16lKSO6EbXxxjgGTvPY2ox7uPEMAtSXUjTkYuuCV4&usqp=CAc")
+img12 = URI.open("https://i.bosity.com/product_img/274/64050477/64050477_7_image.jpg?x-oss-process=image/resize,p_100/watermark,image_d2F0ZXJtYXJrX2ltZy8xNzExMTQwOS9kZWZhdWx0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxQXzk5,g_nw,x_0,y_0")
 costume12.photo.attach(io: img12, filename: "bird-suit.jpg", content_type: "image/jpg")
 costume12.save
 
-
-puts "done"
+puts "All done! Yey!"
