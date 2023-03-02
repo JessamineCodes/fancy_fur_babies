@@ -1,13 +1,19 @@
 <h1>Bookings</h1>
 <p>See the bookings you've made!</p>
 
-<ul>
-  <% @bookings.each do |booking| %>
-    <% if booking.user_id == current_user.id  %>
-        <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> |
-        <%= booking.start_date %> to <%= booking.end_date %> | <%= link_to "Cancel", booking_path(booking), data:{turbo_method: "delete", confirm: "Are you sure?"}%></li>
-    <% end %>
-  <% end %>
-</ul>
 
-<%= link_to "Back to all costumes", costumes_path %>
+  <% @bookings.each do |booking| %>
+    <div class="booking-card">
+      <% if booking.user_id == current_user.id  %>
+        <div class="booking-card-img">
+          <%= cl_image_tag booking.costume.photo.key %>
+        </div>
+        <div class="booking-card-info">
+              <h2><%= link_to booking.costume.product_name, costume_path(booking.costume) %></h2>
+              <p><%= booking.start_date %> to <%= booking.end_date %> | <%= link_to "Cancel", booking_path(booking), data:{turbo_method: "delete", confirm: "Are you sure?"}%></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+<%= link_to "Back to all costumes", costumes_path, class: "button" %>
