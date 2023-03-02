@@ -1,27 +1,33 @@
 
 .costume-title{
-color: rgba(121, 197, 221, 0.6);
+color: #79C5DD;
 font-size: 50px;
 margin-top: 0;
+font-family:'Crimson Text'
+Regular 400
 }
 
-
-.costume-img{
-
-  height: 500px;
+.costume-img img{
+  height: 550px;
   position: clip;
   display: flex;
   align-items: left;
   justify-content: left;
-  padding: 30px;
+  border-radius: 20px;
 }
 
 .booking-form{
   position:absolute;
-  top: 135px;
-  right: 35px;
+  top: 240px;
+  right: 50px;
   padding:10px;
-  border: 3px solid rgba(2, 69, 90, 0.6);
   border-radius:10px;
-  background-color: rgba(121, 197, 221, 0.6);
+  background-color: #735D78;
+  color: white;
+  font-family:'Crimson Text', serif;
+}
+
+.price{
+  color: #79C5DD;
+
 }
