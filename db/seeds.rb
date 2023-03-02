@@ -4,7 +4,7 @@ puts "Cleaning database..."
 Costume.destroy_all
 User.destroy_all
 
-puts "Creating database..."
+puts "Creating users..."
 user1 = User.create!(email: "issy@gmail.com", first_name: "Issy", last_name: "McCallion", address: "London", password: "123456")
 user2 = User.create(email: "kat@gmail.com", first_name: "Kat", last_name: "Conios", address: "London", password: "123456")
 user3 = User.create(email: "jess@gmail.com", first_name: "Jess", last_name: "McHugh", address: "London", password: "123456")
@@ -144,5 +144,54 @@ costume12 = Costume.new(
 img12 = URI.open("https://i.bosity.com/product_img/274/64050477/64050477_7_image.jpg?x-oss-process=image/resize,p_100/watermark,image_d2F0ZXJtYXJrX2ltZy8xNzExMTQwOS9kZWZhdWx0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxQXzk5,g_nw,x_0,y_0")
 costume12.photo.attach(io: img12, filename: "bird-suit.jpg", content_type: "image/jpg")
 costume12.save
+
+puts "Creating bookings..."
+booking1 = Booking.create!(
+  start_date: DateTime.new(2023,9,1,17),
+  end_date: DateTime.new(2023,9,1,18),
+  message: "Can't wait to try this on!",
+  user_id: user3.id,
+  costume_id: costume1.id
+)
+
+booking2 = Booking.create!(
+  start_date: DateTime.new(2023,3,12,17),
+  end_date: DateTime.new(2023,3,13,18),
+  message: "Please could you send this asap!",
+  user_id: user1.id,
+  costume_id: costume2.id
+)
+
+booking3 = Booking.create!(
+  start_date: DateTime.new(2023,4,1,17),
+  end_date: DateTime.new(2023,4,3,18),
+  message: "So spiffy!",
+  user_id: user3.id,
+  costume_id: costume4.id
+)
+
+booking4 = Booking.create!(
+  start_date: DateTime.new(2023,5,7,17),
+  end_date: DateTime.new(2023,5,9,18),
+  message: "Wow! This looks amazeballs!",
+  user_id: user4.id,
+  costume_id: costume3.id
+)
+
+booking5 = Booking.create!(
+  start_date: DateTime.new(2023,4,20,17),
+  end_date: DateTime.new(2023,4,22,18),
+  message: "Asap plssssss",
+  user_id: user3.id,
+  costume_id: costume5.id
+)
+
+booking5 = Booking.create!(
+  start_date: DateTime.new(2023,6,20,17),
+  end_date: DateTime.new(2023,6,22,18),
+  message: "Bloody fabulous",
+  user_id: user2.id,
+  costume_id: costume6.id
+)
 
 puts "All done! Yey!"
