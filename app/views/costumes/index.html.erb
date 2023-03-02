@@ -11,6 +11,15 @@
 <%= link_to "Manage my costumes", my_costumes_costumes_path %> |
 <%= link_to "See my bookings", bookings_index_path %>
 
+<%= form_with url: costumes_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a costume"
+  %>
+  <%= submit_tag "Search", class: "button" %>
+<% end %>
+
 <div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
   <% @costumes.each do |costume| %>
     <div class="col-md-3">
