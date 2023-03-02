@@ -1,0 +1,55 @@
+.new-container {
+  background-color: #735D78;
+  width: 70%;
+  margin: 30px 0px 90px 60px;
+  padding: 30px;
+  border-radius: 40px;
+}
+
+.new-container .form-control {
+  padding: 15px 15px 15px 200px;
+  border-radius: 30px;
+  background-color: #503655;
+}
+
+.new-container .form-label {
+  font-family: monospace;
+  transform: translate(20px, 50px);
+  color: rgb(250, 250, 250)
+}
+
+.new-container .text {
+  font-family: monospace;
+  color: rgb(250, 250, 250)
+}
+
+.new-container .string {
+  font-family: monospace;
+  color: rgb(250, 250, 250)
+}
+
+.new-container .numeric {
+  font-family: monospace;
+  color: rgb(250, 250, 250)
+}
+
+.new-container .form-select {
+  padding: 15px 15px 15px 200px;
+  border-radius: 30px;
+  background-color: #503655;
+}
+
+.new-container select {
+  font-family: monospace;
+  color: rgb(250, 250, 250)
+}
+
+.new-container select:hover {
+  cursor: pointer;
+}
+
+.header-one {
+  color: #79C5DD;
+  font-family: monospace;
+  text-align: center;
+}
