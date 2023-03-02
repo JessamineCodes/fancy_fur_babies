@@ -2,10 +2,12 @@
   position: fixed;
   top: 0;
   width: 100%;
+  align-items: center;
   z-index: 1000;
 }
 
 .navbar-FFB {
+  display: flex;
   justify-content: space-between;
   background: white;
 }
