@@ -37,7 +37,7 @@ class CostumesController < ApplicationController
   end
 
   def my_costumes
-    @costumes = Costume.all
+    @costumes = Costume.where(user_id: current_user.id)
     @bookings = Booking.all
   end
 

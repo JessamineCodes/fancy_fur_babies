@@ -1,32 +1,30 @@
- <h1>Costumes</h1>
+<div class="container">
+  <div>
+    <h1>Costumes</h1>
+    <p>View our full range of fancy finery for your fabulous fur baby...</p>
+  </div>
 
-<p>View our full range of fancy finery for your fabulous fur baby...</p>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+  </style>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-</style>
-
-
-<%= link_to "List a new costume", new_costume_path %> |
-<%= link_to "Manage my costumes", my_costumes_costumes_path %> |
-<%= link_to "See my bookings", bookings_index_path %>
-
-<div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
-  <% @costumes.each do |costume| %>
-    <div class="col-md-3">
-      <div class="card h-70">
-        <%= link_to costume_path(costume) do %>
-          <%= cl_image_tag costume.photo.key, class: 'card-img-top'%>
-        <% end %>
-        <div class="card-body">
-          <h2 class="card-title"><%= costume.product_name %></h2>
-            <p class="card-text">
-              <%= costume.pet_type%>
-              <br>£<%= costume.price%>
-            </p>
-          <a href="#" class="homepage-btn">info</a>
+  <div class="card-trip row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
+    <% @costumes.each do |costume| %>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <%= link_to costume_path(costume) do %>
+            <%= cl_image_tag costume.photo.key, class: 'card-img-top'%>
+          <% end %>
+          <div class="card-body d-flex flex-column" style="justify-content: space-between">
+            <h2 class="card-title"><%= costume.product_name %></h2>
+              <p class="card-text">
+                <%= costume.pet_type%>
+                <br>£<%= costume.price%>
+              </p>
+            <a href="#" class="homepage-btn">info</a>
+          </div>
         </div>
       </div>
-    </div>
-  <%end%>
+    <%end%>
+  </div>
 </div>
