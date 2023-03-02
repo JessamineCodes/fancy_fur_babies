@@ -12,7 +12,7 @@
     <div class="col-md-3">
       <div class="card h-70">
         <%= link_to costume_path(costume) do %>
-          <%= image_tag costume.img, class: 'card-img-top'%>
+          <%= cl_image_tag costume.photo.key, class: 'card-img-top'%>
         <% end %>
         <div class="card-body">
           <h1 class="card-title"><%= costume.product_name %></h1>

@@ -3,9 +3,9 @@
 
 <%= simple_form_for @costume do |f| %>
   <%= f.input :product_name %>
-  <%= f.input :img %>
+  <%= f.input :photo, as: :file %>
   <%= f.input :details %>
   <%= f.input :price %>
-  <%= f.input :pet_type, collection: %w[cat bird dog reptile] %>
+  <%= f.input :pet_type, collection: ["cat", "bird", "dog", "reptile", "small mammal"] %>
   <%= f.submit %>
 <% end %>
