@@ -9,25 +9,38 @@ Regular 400
 
 .costume-img img{
   height: 550px;
+  width: 550px;
   position: clip;
   display: flex;
   align-items: left;
   justify-content: left;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .booking-form{
-  position:absolute;
-  top: 240px;
-  right: 50px;
-  padding:10px;
+  height: 530px;
+  width: 420px;
+  margin-top: 120px;
+  padding:20px;
   border-radius:10px;
   background-color: #735D78;
   color: white;
-  font-family:'Crimson Text', serif;
+
 }
 
 .price{
   color: #79C5DD;
+}
 
+.description{
+  color: #79C5DD;
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.details{
+  font-size: 20px;
+  font-weight: bold;
 }
