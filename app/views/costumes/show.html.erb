@@ -1,13 +1,13 @@
+
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-    <%# Column 1 here %>
       <div class= "costume-title">
         <h1><%= @costume.product_name %></h1>
       </div>
 
-      <div class= "costume-img">
-        <img src=<%= @costume.img %>>
+      <<div class= "costume-img">
+        <%= cl_image_tag @costume.photo.key %>
       </div>
 
       <div class= "extra-info">

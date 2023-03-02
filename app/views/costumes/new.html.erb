@@ -1,11 +1,15 @@
 <h1>Add a new cossy</h1>
 <p>List a lil costume for widdle pets...</p>
 
+<div>
 <%= simple_form_for @costume do |f| %>
+<h2 class='form-title'>list a new costume</h2>
   <%= f.input :product_name %>
-  <%= f.input :img %>
+  <%= f.input :photo, as: :file %>
   <%= f.input :details %>
   <%= f.input :price %>
-  <%= f.input :pet_type, collection: %w[cat bird dog reptile hamster] %>
-  <%= f.submit %>
+  <%= f.input :pet_type, collection: ["cat", "bird", "dog", "reptile", "small mammal"] %>
+  <%= f.submit 'Add Costume', class: 'button' %>
+
 <% end %>
+</div>

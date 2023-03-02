@@ -14,15 +14,17 @@
 <div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
   <% @costumes.each do |costume| %>
     <div class="col-md-3">
-      <div class="card">
+      <div class="card h-70">
         <%= link_to costume_path(costume) do %>
-          <%= image_tag costume.img, class: 'card-img-top'%>
+          <%= cl_image_tag costume.photo.key, class: 'card-img-top'%>
         <% end %>
         <div class="card-body">
-          <h1 class="card-title"><%= costume.product_name %></h1>
-          <p class="card-text"><%= costume.details%></p>
-          <p class="card-text"><%= costume.pet_type%></p>
-          <p class="card-text">£<%= costume.price %></p>
+          <h2 class="card-title"><%= costume.product_name %></h2>
+            <p class="card-text">
+              <%= costume.pet_type%>
+              <br>£<%= costume.price%>
+            </p>
+          <a href="#" class="homepage-btn">info</a>
         </div>
       </div>
     </div>

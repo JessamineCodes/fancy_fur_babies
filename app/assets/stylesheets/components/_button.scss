@@ -1,0 +1,41 @@
+.button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(250, 250, 250);
+  background-color: #79C5DD;
+  height: 48px;
+  margin: 50px auto 0;
+  align-items: center;
+  display: block;
+  width: 30px;
+  font-family: Livvic;
+
+
+
+  &:hover{
+    background-color: rgb(149, 206, 229);
+    transition: background-color 0.5s;
+  }
+}
+
+.homepage-btn {
+  background-color: rgb(37, 143, 196);
+  color: rgb(0, 0, 0);
+  display: block;
+  margin: 45px auto 0;
+  align-items: center;
+  border-radius: 50px;
+}
