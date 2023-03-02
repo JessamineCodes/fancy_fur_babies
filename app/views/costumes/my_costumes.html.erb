@@ -31,7 +31,6 @@
 		<div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
 			<% @bookings.each do |booking| %>
 				<% if booking.costume.user_id == current_user.id  %>
-				<% end %>
 				<div class="col-md-3">
 					<div class="card h-100">
 						<%= cl_image_tag booking.costume.photo.key, class: 'card-img-top'%>
@@ -43,6 +42,7 @@
 						</div>
 					</div>
 				</div>
+				<% end %>
 			<% end %>
 		</div>
 		<%= link_to "Back to all costumes", costumes_path %>
