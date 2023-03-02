@@ -15,6 +15,26 @@
   <%= link_to "List a new costume", new_costume_path %>
 </div>
 
+<div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
+  <% @costumes.each do |costume| %>
+    <% if costume.user_id == current_user.id  %>
+    <% end %>
+    <div class="col-md-3">
+      <div class="card h-70">
+          <%= image_tag costume.img, class: 'card-img-top'%>
+        <div class="card-body">
+          <h1 class="card-title"><%= costume.product_name %></h1>
+            <p class="card-text">
+              <%= costume.pet_type%>
+              <br>£<%= costume.price%>
+            </p>
+          <a href="#" class="homepage-btn">info</a>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>
+
 <div>
   <h2>Bookings for my costumes</h2>
   <ul>
