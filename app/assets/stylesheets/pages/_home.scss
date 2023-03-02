@@ -1,5 +1,4 @@
 // Specific CSS for your home-page
-
 body{
 background-color: rgb(255, 255, 255);
 
@@ -10,11 +9,6 @@ background-color: rgb(255, 255, 255);
   margin: 80px auto 0;
   display: block;
   align-items: center;
-}
-
-
-home p{
-  text-align: center;
 }
 
 .homepage-btn{
@@ -43,7 +37,7 @@ width: 30px;
 font-family: 'Crimson Text', serif;
 
 &:hover{
-  background-color:79C5DD;
+  background-color:#79C5DD;
   transition: background-color 0.5s;
 }
 }
