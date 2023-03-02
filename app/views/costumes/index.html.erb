@@ -1,11 +1,26 @@
-<h1>Costumes</h1>
+ <h1>Costumes</h1>
+
 <p>View our full range of fancy finery for your fabulous fur baby...</p>
-<ul>
-<% @costumes.each do |costume| %>
-<li><%= link_to costume.product_name, costume_path(costume) %> | <%= link_to "Edit", edit_costume_path(costume) %></li>
-<% end %>
-</ul>
+
 
 <%= link_to "List a new costume", new_costume_path %> |
 <%= link_to "Manage my costumes", my_costumes_costumes_path %> |
 <%= link_to "See my bookings", bookings_index_path %>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
+  <% @costumes.each do |costume| %>
+    <div class="col-md-3">
+      <div class="card">
+        <%= link_to costume_path(costume) do %>
+          <%= image_tag costume.img, class: 'card-img-top'%>
+        <% end %>
+        <div class="card-body">
+          <h1 class="card-title"><%= costume.product_name %></h1>
+          <p class="card-text"><%= costume.details%></p>
+          <p class="card-text"><%= costume.pet_type%></p>
+          <p class="card-text">£<%= costume.price %></p>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>

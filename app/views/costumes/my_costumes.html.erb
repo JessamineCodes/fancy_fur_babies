@@ -2,23 +2,27 @@
 
 <p>Here you can see all of your costumes and the upcoming bookings for them!</p>
 
-<h2>My listed costumes</h2>
-<ul>
-<% @costumes.each do |costume| %>
-  <% if costume.user_id == current_user.id  %>
-    <li><%= link_to costume.product_name, costume_path(costume)  %> | <%= link_to "Delete", costume_path(costume), data:{turbo_method: "delete"} %></li>
-  <% end %>
-<% end %>
-</ul>
-
-
-<h2>Bookings for my costumes</h2>
-<ul>
-  <% @bookings.each do |booking| %>
-    <% if booking.costume.user_id == current_user.id  %>
-        <li><%= link_to booking.costume.list_a_new_costum, costume_path(booking.costume) %> | <%= booking.start_date %> to <%= booking.end_date %> | Booked by <%= booking.user.first_name %></li>
+<div>
+  <h2>My listed costumes</h2>
+  <ul>
+  <% @costumes.each do |costume| %>
+    <% if costume.user_id == current_user.id  %>
+      <li><%= link_to costume.product_name, costume_path(costume)  %> | <%= link_to "Edit", edit_costume_path(costume) %> | <%= link_to "Delete", costume_path(costume), data:{turbo_method: "delete", confirm: "Are you sure?"} %></li>
     <% end %>
   <% end %>
-</ul>
+  </ul>
 
+  <%= link_to "List a new costume", new_costume_path %>
+</div>
+
+<div>
+  <h2>Bookings for my costumes</h2>
+  <ul>
+    <% @bookings.each do |booking| %>
+      <% if booking.costume.user_id == current_user.id  %>
+          <li><%= link_to booking.costume.product_name, costume_path(booking.costume) %> | <%= booking.start_date %> to <%= booking.end_date %> | Booked by <%= booking.user.first_name %> |  Message: "<%= booking.message %>"</li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
 <%= link_to "Back to all costumes", costumes_path %>

@@ -56,7 +56,7 @@ Costume.create(
 Costume.create(
   product_name: "tux",
   img: "https://i.etsystatic.com/10768173/r/il/fa261d/3066117548/il_570xN.3066117548_pmig.jpg",
-  details: "perfect addition to any black-tie event",
+  details: "needed for any black-tie event",
   price: 15.0,
   pet_type: "dog",
   user: user3

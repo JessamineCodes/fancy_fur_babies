@@ -1,13 +1,21 @@
-<h1><%= @costume.product_name %></h1>
+<div class= "costume-title">
+  <h1><%= @costume.product_name %></h1>
+</div>
 
-<img src=<%= @costume.img %>>
-<p>Price: <%= @costume.price %></p>
-<p>For your lil <%= @costume.pet_type %></p>
+<div class= "costume-img">
+  <img src=<%= @costume.img %>>
+</div>
 
+
+
+<div class= "extra-info">
+  <p>Price: <%= @costume.price %></p>
+  <p>For your lil <%= @costume.pet_type %></p>
 <h3>More info</h3>
 <p><%= @costume.details %></p>
 
-<div id="booking-box">
+
+<div id="booking-box" class= "booking-form">
   <h2>Book this sweet costume!</h2>
   <%= simple_form_for [@costume, @booking] do |f| %>
     <%= f.input :start_date %>
