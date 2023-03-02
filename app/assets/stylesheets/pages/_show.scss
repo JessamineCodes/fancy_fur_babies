@@ -1,0 +1,27 @@
+
+.costume-title{
+color: rgba(121, 197, 221, 0.6);
+font-size: 50px;
+margin-top: 0;
+}
+
+
+.costume-img{
+
+  height: 500px;
+  position: clip;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 30px;
+}
+
+.booking-form{
+  position:absolute;
+  top: 135px;
+  right: 35px;
+  padding:10px;
+  border: 3px solid rgba(2, 69, 90, 0.6);
+  border-radius:10px;
+  background-color: rgba(121, 197, 221, 0.6);
+}
