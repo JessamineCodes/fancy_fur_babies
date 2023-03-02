@@ -3,8 +3,8 @@
 
 
   <% @bookings.each do |booking| %>
-    <div class="booking-card">
-      <% if booking.user_id == current_user.id  %>
+    <% if booking.user_id == current_user.id  %>
+      <div class="booking-card">
         <div class="booking-card-img">
           <%= cl_image_tag booking.costume.photo.key %>
         </div>
@@ -12,8 +12,8 @@
               <h2><%= link_to booking.costume.product_name, costume_path(booking.costume) %></h2>
               <p><%= booking.start_date %> to <%= booking.end_date %> | <%= link_to "Cancel", booking_path(booking), data:{turbo_method: "delete", confirm: "Are you sure?"}%></p>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% end %>
 
 <%= link_to "Back to all costumes", costumes_path, class: "button" %>
