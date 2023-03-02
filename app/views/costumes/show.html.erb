@@ -1,28 +1,36 @@
-<div class= "costume-title">
-  <h1><%= @costume.product_name %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class= "costume-title">
+        <h1><%= @costume.product_name %></h1>
+      </div>
+
+      <<div class= "costume-img">
+        <%= cl_image_tag @costume.photo.key %>
+      </div>
+
+      <div class= "extra-info">
+        <h4 class= "price">Price: <%= @costume.price %></h4>
+        <h4 class="description">For your lil <%= @costume.pet_type %></h4>
+       <h4 class= "more info">More info</h4>
+      <h4><%= @costume.details %></h4>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <%# Column 2 here %>
+      <div id="booking-box" class= "booking-form">
+        <h2>Book this sweet costume</h2>
+        <%= simple_form_for [@costume, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.input :message%>
+          <%= f.submit :message, class: 'btn homepage-btn'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class= "costume-img">
-  <%= cl_image_tag @costume.photo.key %>
-</div>
-
-
-
-<div class= "extra-info">
-  <p>Price: <%= @costume.price %></p>
-  <p>For your lil <%= @costume.pet_type %></p>
-<h3>More info</h3>
-<p><%= @costume.details %></p>
-
-
-<div id="booking-box" class= "booking-form">
-  <h2>Book this sweet costume!</h2>
-  <%= simple_form_for [@costume, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.input :message%>
-    <%= f.submit :message%>
-  <% end %>
-</div>
 
 <%= link_to "Back to all costumes", costumes_path %>
