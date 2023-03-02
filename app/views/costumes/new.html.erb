@@ -1,9 +1,12 @@
-<h1>Add a new cossy</h1>
-<p>List a lil costume for widdle pets...</p>
+<h1 class="header-one">Add a new cossy</h1>
+
+<div class="new-container">
+
+<p class="header-one">List a lil costume for widdle pets...</p>
 
 <div>
 <%= simple_form_for @costume do |f| %>
-<h2 class='form-title'>list a new costume</h2>
+<h2 class="form-title">list a new costume</h2>
   <%= f.input :product_name %>
   <%= f.input :photo, as: :file %>
   <%= f.input :details %>
@@ -12,4 +15,5 @@
   <%= f.submit 'Add Costume', class: 'button' %>
 
 <% end %>
+</div>
 </div>
