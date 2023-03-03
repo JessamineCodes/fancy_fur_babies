@@ -7,8 +7,9 @@ h1, h2 {
 .costume-title{
 color: #79C5DD;
 font-size: 50px;
-margin-top: 0;
-font-family:'Crimson Text'
+// margin-bottom: 10px;
+font-family: 'Livvic', 'sans-serif';
+margin: 0 auto !important;
 }
 
 .costume-img img{
@@ -25,7 +26,7 @@ font-family:'Crimson Text'
 .booking-form{
   height: 530px;
   width: 420px;
-  margin-top: 120px;
+  // margin-top: 120px;
   padding:55px;
   border-radius:10px;
   background-color: #735D78;
@@ -37,6 +38,8 @@ font-family:'Crimson Text'
 
 .price{
   color: #79C5DD;
+  bottom: 0;
+  font-weight: bold;
 }
 
 .description{
@@ -49,6 +52,7 @@ font-family:'Crimson Text'
 .details{
   font-size: 20px;
   font-weight: bold;
+  color: #79C5DD;
 }
 
 .homepage-btn{
@@ -56,6 +60,7 @@ font-family:'Crimson Text'
   text-align: center;
   color: #ffffff;
   font-family: 'Lobster','cursive';
+  margin: 50px auto;
 
 &:hover{
   background-color: rgb(149, 206, 229);
