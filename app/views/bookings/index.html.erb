@@ -6,11 +6,15 @@
     <% if booking.user_id == current_user.id  %>
       <div class="booking-card col-4">
         <div class="booking-card-img">
-          <%= cl_image_tag booking.costume.photo.key %>
+          <%= cl_image_tag(booking.costume.photo.key, gravity: :face, crop: :fill) %>
         </div>
         <div class="booking-card-info">
-              <h2><%= link_to booking.costume.product_name, costume_path(booking.costume) %></h2>
-              <p><%= booking.start_date %> to <%= booking.end_date %> | <%= link_to "Cancel", booking_path(booking), data:{turbo_method: "delete", confirm: "Are you sure?"}%></p>
+              <h2><%= link_to booking.costume.product_name, costume_path(booking.costume), class: "booking-link" %></h2>
+              <p><%= booking.start_date %> to <%= booking.end_date %>
+              <%= link_to booking_path(booking), data:{turbo_method: "delete", turbo_confirm: "Are you sure?"} do %>
+               <i class="fa-solid fa-trash"></i>
+               <% end %>
+              </p>
         </div>
       </div>
     <% end %>
