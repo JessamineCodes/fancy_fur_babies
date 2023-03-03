@@ -6,7 +6,7 @@
     <% if booking.user_id == current_user.id  %>
       <div class="booking-card col-4">
         <div class="booking-card-img">
-          <%= cl_image_tag(booking.costume.photo.key, gravity: :face, crop: :fill) %>
+          <%= link_to cl_image_tag(booking.costume.photo.key, gravity: :face, crop: :fill), costume_path(booking.costume) %>
         </div>
         <div class="booking-card-info">
               <h2><%= link_to booking.costume.product_name, costume_path(booking.costume), class: "booking-link" %></h2>

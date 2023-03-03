@@ -12,7 +12,7 @@
       </div>
 
 
-        <h4 class= "price ">Price: £ <%= @costume.price %></h4>
+        <h4 class= "price ">£ <%= '%.2f' % @costume.price %></h4>
         <p class="description"> For your gorgeous <%= @costume.pet_type %> <p>
       </div>
 
@@ -20,10 +20,10 @@
       <div id="booking-box" class= "booking-form">
         <h2>Book this sweet costume</h2>
         <%= simple_form_for [@costume, @booking] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date, as: :date, html5: true %>
           <%= f.input :message%>
-          <%= f.submit :message, class: 'btn homepage-btn'%>
+          <%= f.submit :Book, class: 'btn homepage-btn'%>
         <% end %>
       </div>
     </div>
