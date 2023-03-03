@@ -1,27 +1,27 @@
 <div class="container">
-  <div>
+  <div class="costumes-header-card">
     <h1>Costumes</h1>
     <p>View our full range of fancy finery for your fabulous fur baby...</p>
-  </div>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-  </style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+      </style>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-</style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+    </style>
 
 
-<%= form_with url: costumes_path, method: :get, class: "d-flex search-bar" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control search-input",
-    placeholder: "Find a costume"
-  %>
-  <%= submit_tag "Search", class: "button m-0" %>
-<% end %>          
-  
+  <%= form_with url: costumes_path, method: :get, class: "d-flex search-bar mb-5" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control search-input",
+      placeholder: "Find a costume"
+    %>
+    <%= submit_tag "Search", class: "button m-0" %>
+  <% end %>
+
+
     <div class="card-trip row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
     <% @costumes.each do |costume| %>
       <div class="col-md-3">
@@ -32,8 +32,21 @@
           <div class="card-body d-flex flex-column" style="justify-content: space-between">
             <h2 class="card-title"><%= costume.product_name %></h2>
               <p class="card-text">
-                <%= costume.pet_type%>
-                <br>£<%= costume.price%>
+
+              <% if costume.pet_type == "cat" %>
+                <i class="fa-solid fa-cat"></i>
+              <% elsif costume.pet_type == "dog" %>
+                <i class="fa-solid fa-dog"></i>
+              <% elsif costume.pet_type == "bird" %>
+                <i class="fa-solid fa-dove"></i>
+              <% elsif costume.pet_type == "small mammal" %>
+                <i class="fa-solid fa-carrot"></i>
+              <% elsif costume.pet_type == "reptile" %>
+                <i class="fa-solid fa-dragon"></i>
+              <% end %>
+
+                <br>£<%= '%.2f' % costume.price%>
+
               </p>
             <%= link_to "Info", costume_path(costume), class: "button"%>
           </div>
@@ -42,3 +55,5 @@
       </div>
     <%end%>
   </div>
+</div>
+</div>
