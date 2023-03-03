@@ -35,22 +35,22 @@
 		</div>
 
 		<div>
-			<h2>Bookings for my costumes</h2>
+			<h2 class="mb-4">Bookings for my costumes</h2>
 
 			<div class="row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
 				<% @bookings.each do |booking| %>
 					<% if booking.costume.user_id == current_user.id  %>
-					<div class="col-md-3">
-						<div class="card h-100">
-							<%= cl_image_tag booking.costume.photo.key, class: 'card-img-top'%>
-							<div class="card-body d-flex flex-column" style="justify-content: 			space-between;">
-								<h1 class="card-title"><%= booking.costume.product_name %></h1>
-									<p class="card-text">
-										<%= link_to booking.costume.product_name, costume_path(booking.costume) %> | <%= booking.start_date %> to <%= booking.end_date %> | Booked by <%= booking.user.first_name %> |  Message: "<%= booking.message %>
-									</p>
-							</div>
-						</div>
-					</div>
+            <div class="booking-card col-4">
+              <div class="booking-card-img">
+                <%= cl_image_tag booking.costume.photo.key%>
+              </div>
+              <div class="booking-card-info">
+                <h2><%= link_to booking.costume.product_name, costume_path(booking.costume), class: "booking-link" %></h2>
+                <p><%= booking.start_date %> to <%= booking.end_date %>
+                <br>Booked by <%= booking.user.first_name %>
+                <br>Message: "<%= booking.message %>"
+                </div>
+            </div>
 					<% end %>
 				<% end %>
 			</div>

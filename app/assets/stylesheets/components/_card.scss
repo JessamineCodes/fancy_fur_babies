@@ -29,26 +29,27 @@
 
 .booking-card {
   overflow: hidden;
-  height: 120px;
+  height: 200px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width: 360px;
+  width: 480px;
   margin-left: 8px;
   margin-right: 8px;
   padding-left: 0;
+  margin-bottom: 16px;
 }
 
 .booking-card img {
-  height: 120px;
-  max-width: 120px;
+  height: 200px;
+  max-width: 200px;
   object-fit: cover;
   margin-right: 8px;
 }
 
 .booking-card-info h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
   text-decoration: none;
@@ -56,7 +57,7 @@
 }
 
 .booking-card p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;

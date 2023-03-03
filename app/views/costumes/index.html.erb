@@ -1,15 +1,12 @@
 <div class="container">
-  <div class="costumes-header-card">
+  <div>
     <h1>Costumes</h1>
     <p>View our full range of fancy finery for your fabulous fur baby...</p>
+  </div>
 
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-      </style>
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-    </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+  </style>
 
 
   <%= form_with url: costumes_path, method: :get, class: "d-flex search-bar mb-5" do %>
@@ -20,7 +17,6 @@
     %>
     <%= submit_tag "Search", class: "button m-0" %>
   <% end %>
-
 
     <div class="card-trip row row-cols-1 row-cols-md-3 g-4 h-200 shadow p-3 mb-5 bg-body rounded">
     <% @costumes.each do |costume| %>
@@ -33,7 +29,6 @@
             <h2 class="card-title"><%= costume.product_name %></h2>
               <div class="d-flex" style="justify-content: space-between; margin-top:auto">
               <p>
-
               <% if costume.pet_type == "cat" %>
                 <i class="fa-solid fa-cat"></i>
               <% elsif costume.pet_type == "dog" %>
@@ -56,5 +51,4 @@
       </div>
     <%end%>
   </div>
-</div>
 </div>

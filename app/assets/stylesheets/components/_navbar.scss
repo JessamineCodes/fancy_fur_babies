@@ -27,10 +27,15 @@
 }
 
 .nav-btn {
-color: #735D78;
-border-radius: 10px;
-padding: 8px;
-margin: 12px 4px 4px;
+  border-radius: 10px;
+  padding: 8px;
+  // margin: 12px 4px 4px;
+  font-weight: 400;
+  color: #79C5DD;
+
+  &:hover{
+  color: #735D78;
+  }
 }
 
 .dropdown-toggle {
