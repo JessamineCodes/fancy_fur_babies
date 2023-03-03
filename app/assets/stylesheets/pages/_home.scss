@@ -17,12 +17,11 @@ background-color: rgb(255, 255, 255);
 }
 
 .homepage-btn{
-display: inline-block;
 outline: none;
 cursor: pointer;
 font-size: 14px;
 line-height: 1;
-border-radius: 500px;
+border-radius: 50px;
 transition-property: background-color,border-color,color,box-shadow,filter;
 transition-duration: .3s;
 border: 1px solid transparent;
@@ -32,17 +31,19 @@ text-transform: uppercase;
 white-space: normal;
 font-weight: 700;
 text-align: center;
-padding: 17px 48px;
+padding: 17px 30px;
 color: #ffffff;
-background-color: rgba(121, 197, 221, 0.6);
+background-color: #79C5DD;
 height: 48px;
 align-items: center;
 display: block;
 width: 30px;
+font-family: 'Lobster','cursive';
+margin: 0px auto 50px;
 
-&:hover{
-  background-color: rgb(149, 206, 229);
-  transition: background-color 0.5s;
-  color: #ffffff;
-}
+  &:hover{
+    background-color: #735D78;;
+    transition: background-color 0.5s;
+    color: #ffffff;
+  }
 }
