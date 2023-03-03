@@ -1,5 +1,8 @@
-<h1>Bookings</h1>
-<p>See the bookings you've made!</p>
+<div class="container">
+  <div class="booking-heading-card">
+    <h1>Bookings</h1>
+    <p>See the bookings you've made!</p>
+  </div>
 
 <div class="row">
   <% @bookings.each do |booking| %>
@@ -19,5 +22,6 @@
       </div>
     <% end %>
   <% end %>
-</div>
-<%= link_to "Back to all costumes", costumes_path, class: "button" %>
+  </div>
+    <%= link_to "Back to all costumes", costumes_path, class: "button" %>
+  </div>
