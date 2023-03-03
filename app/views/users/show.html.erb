@@ -1,8 +1,10 @@
-<h1>My profile</h1>
+<div>
+  <h1>My profile</h1>
 
-<p>First name: <%= @user.first_name %></p>
-<p>Last name: <%= @user.last_name %></p>
-<p>Address: <%= @user.address %></p>
-<p>Email: <%= @user.email %></p>
+  <p>First name: <%= @user.first_name %></p>
+  <p>Last name: <%= @user.last_name %></p>
+  <p>Address: <%= @user.address %></p>
+  <p>Email: <%= @user.email %></p>
 
-<%= link_to "Edit my profile", edit_user_path(@user) %>
+  <%= link_to "Edit my profile", edit_user_path(@user) %>
+</div>

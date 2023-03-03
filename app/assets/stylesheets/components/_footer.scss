@@ -1,14 +1,16 @@
 .footer {
   color: rgb(250, 250, 250);
-  position: fixed;
   font-size: 15px;
   padding: 16px;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px;
   text-align: center;
   background-color: #79C5DD;
+  margin-top: 15px;
+  position:absolute;
+  height: 2.5rem;
+
 }
 
 .fab{

@@ -11,53 +11,55 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-    <div class="navbar navbar-expand-sm navbar-light navbar-FFB">
-      <div class="container-fluid">
-        <%= link_to costumes_path, class: "navbar-brand" do %>
-          <%= image_tag "Logo-FFB.png" %>
-        <% end %>
+    <div class="home-container">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="navbar navbar-expand-sm navbar-light navbar-FFB">
+        <div class="container-fluid">
+          <%= link_to costumes_path, class: "navbar-brand" do %>
+            <%= image_tag "Logo-FFB.png" %>
+          <% end %>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item active">
-              <%= link_to "All costumes", costumes_path, class: "nav-link nav-btn" %>
-            </li>
-            <% if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to "Manage my costumes", my_costumes_costumes_path, class: "nav-link nav-btn" %>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <%= link_to "All costumes", costumes_path, class: "nav-link nav-btn" %>
               </li>
-              <li class="nav-item">
-                <%= link_to "Manage my bookings", bookings_index_path, class: "nav-link nav-btn" %>
-              </li>
-              <li class="nav-item dropdown">
-                <%= image_tag "menu-icon-and-avatar-FFB.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%# <%= link_to "All Costumes", costumes_path, class: "dropdown-item" %>
-                  <%# <%= link_to "Manage My Costumes", my_costumes_costumes_path, class: "dropdown-item" %>
-                  <%# <%= link_to "Manage my Bookings", bookings_index_path, class: "dropdown-item" %>
-                  <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-                </div>
-              </li>
-            <% else %>
-              <li class="nav-item">
-                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-              </li>
-            <% end %>
-          </ul>
+              <% if user_signed_in? %>
+                <li class="nav-item">
+                  <%= link_to "Manage my costumes", my_costumes_costumes_path, class: "nav-link nav-btn" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Manage my bookings", bookings_index_path, class: "nav-link nav-btn" %>
+                </li>
+                <li class="nav-item dropdown">
+                  <%= image_tag "menu-icon-and-avatar-FFB.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <%# <%= link_to "All Costumes", costumes_path, class: "dropdown-item" %>
+                    <%# <%= link_to "Manage My Costumes", my_costumes_costumes_path, class: "dropdown-item" %>
+                    <%# <%= link_to "Manage my Bookings", bookings_index_path, class: "dropdown-item" %>
+                    <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
+                    <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+                  </div>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div id="space-below-navbar">
-    </div>
-    <%= yield %>
+      <div id="space-below-navbar">
+      </div>
+      <%= yield %>
       <div class="footer">
         <div class="footer-links">
           <a href="#"><i class="fab fa-github"></i></a>
@@ -66,9 +68,10 @@
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
-        <div class="footer-copyright">
+        <div class="footer">
           This footer is made with <i class="fas fa-heart"></i> by Mind Mission
         </div>
-  </div>
+      </div>
+    </div>
   </body>
 </html>
