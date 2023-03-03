@@ -1,17 +1,17 @@
 
 
 <div class="home-img and text">
-  <%= image_tag "homepage-dog.jpg", class: "logo" %>
+  <%= image_tag "homepage-dog.jpg", class: "logo", :style => "margin-top: 50px" %>
   <div class= "home-text">
     <h1>Welcome to Fancy Fur Babies!</h1>
     <p>We have a wide array of exquisite costumes for all your precious creatures!</p>
   </div>
+  <div>
+    <%# <button class="btn homepage-btn">Enter!</button> %>
+    <%= link_to "Enter!", costumes_path, class: "btn homepage-btn"  %>
+  </div>
 </div>
 
-<div>
-  <%# <button class="btn homepage-btn">Enter!</button> %>
-  <%= link_to "Enter!", costumes_path, class: "btn homepage-btn"  %>
-</div>
 
 
 

@@ -17,7 +17,7 @@
     <div class="home-container">
 
       <div class="navbar navbar-expand-sm navbar-light navbar-FFB d-flex" style="align-contents: center">
-        <div class="container-fluid">
+        <div class="container-fluid", style="margin-right: 10px">
           <%= link_to costumes_path, class: "navbar-brand" do %>
             <%= image_tag "Logo-FFB.png" %>
           <% end %>
@@ -36,7 +36,7 @@
                   <%= image_tag "Hamburger-FFB.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <%= link_to "Manage My Costumes", my_costumes_costumes_path, class: "dropdown-item"%>
-                    <%= link_to "Manage my Bookings", bookings_index_path, class: "dropdown-item" %>
+                    <%= link_to "Manage My Bookings", bookings_index_path, class: "dropdown-item" %>
                     <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
                     <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
                   </div>
