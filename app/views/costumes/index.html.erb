@@ -25,9 +25,9 @@
           <%= link_to costume_path(costume) do %>
             <%= cl_image_tag costume.photo.key, class: 'card-img-top'%>
           <% end %>
-          <div class="card-body d-flex flex-column" style="justify-content: space-between">
+          <div class="card-body d-flex flex-column" style="justify-content: space-between; align-contents: center">
             <h2 class="card-title"><%= costume.product_name %></h2>
-              <div class="d-flex" style="justify-content: space-between; margin-top:auto">
+              <div class="d-flex" style="justify-content: space-between; margin-top:auto, align-contents: center">
               <p>
               <% if costume.pet_type == "cat" %>
                 <i class="fa-solid fa-cat"></i>
