@@ -25,18 +25,22 @@
   text-decoration:none;
 
   &:hover{
-    background-color: rgb(149, 206, 229);
+    background-color: #735D78;
     transition: background-color 0.5s;
+    color:#ffffff;
   }
 }
 
 .homepage-btn {
   background-color: rgb(37, 143, 196);
-  color: rgb(0, 0, 0);
+  color: #79C5DD;
   display: block;
   margin: 8px auto 0;
   align-items: center;
   border-radius: 50px;
   font-family: 'Livvic', sans-serif;
-
+  &:hover{
+    background-color: #735D78;
+    transition: background-color 0.5s;
+  }
 }

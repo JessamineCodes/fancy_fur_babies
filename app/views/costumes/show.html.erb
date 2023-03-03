@@ -1,20 +1,22 @@
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6 d-flex flex-column align-items-center">
       <div class= "costume-title" style="align-self:start;">
-        <h1><%= @costume.product_name %> </h1> <p class="details"> <%= @costume.details %></p>
-
+        <h1><%= @costume.product_name %> </h1>
       </div>
+  <div class="row mb-4">
+    <div class="col-sm-6 d-flex flex-column align-items-center">
 
       <div class= "costume-img">
         <%= cl_image_tag @costume.photo.key %>
       </div>
-
-
-        <h4 class= "price ">Price: £ <%= @costume.price %></h4>
-        <p class="description"> For your gorgeous <%= @costume.pet_type %> <p>
+      <div class="card-info">
+        <div>
+          <p class="description"> For your gorgeous <%= @costume.pet_type %><p>
+          <p class="details"> <%= @costume.details %></p>
+        </div>
+        <h4 class= "price "> £ <%= @costume.price %></h4>
       </div>
+    </div>
 
     <div class="col-sm-6 d-flex flex-column align-items-center">
       <div id="booking-box" class= "booking-form">
