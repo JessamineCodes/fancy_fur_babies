@@ -15,10 +15,11 @@
 					<div class="card h-100">
 						<%= link_to costume_path(costume) do %>
 							<%= cl_image_tag costume.photo.key, class: 'card-img-top'%>
-							<div class="card-body d-flex flex-column" style="justify-content: space-between;">
+							<div class="card-body d-flex flex-column" style="justify-content: space-between" >
 						<% end %>
 								<h1 class="card-title"><%= costume.product_name %></h1>
-								<p class="card-text">
+								<br>
+								<p class="card-text" style="text-align: center; margin-top: auto">
 									<%= link_to edit_costume_path(costume) do %>
 										<i class="fa-solid fa-pencil"></i>
 									<% end %>
