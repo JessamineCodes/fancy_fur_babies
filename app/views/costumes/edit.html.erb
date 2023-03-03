@@ -1,11 +1,18 @@
-<h1>Edit costume deets</h1>
-<p>Make sure the lowdown is correct...</p>
+<h1 class="header-one">Edit Your Cute Lil Cossy</h1>
 
-<%= simple_form_for @costume do |f| %>
-  <%= f.input :product_name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :details %>
-  <%= f.input :price %>
-  <%= f.input :pet_type, collection: ["cat", "bird", "dog", "reptile", "small mammal"] %>
-  <%= f.submit %>
-<% end %>
+<div class="new-container">
+
+
+  <div>
+    <%= simple_form_for @costume do |f| %>
+    <h2 class="form-title">Edit your costume details...</h2>
+      <%= f.input :product_name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :details %>
+      <%= f.input :price %>
+      <%= f.input :pet_type, collection: ["cat", "bird", "dog", "reptile", "small mammal"] %>
+      <%= f.submit 'Edit Costume', class: 'button', id:'form-submit-btn' %>
+
+    <% end %>
+  </div>
+</div>
