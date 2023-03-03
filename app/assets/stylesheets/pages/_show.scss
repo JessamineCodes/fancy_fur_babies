@@ -1,10 +1,14 @@
 
+h1, h2 {
+  color: #79C5DD;
+
+}
+
 .costume-title{
 color: #79C5DD;
 font-size: 50px;
 margin-top: 0;
 font-family:'Crimson Text'
-Regular 400
 }
 
 .costume-img img{
@@ -22,11 +26,13 @@ Regular 400
   height: 530px;
   width: 420px;
   margin-top: 120px;
-  padding:20px;
+  padding:55px;
   border-radius:10px;
   background-color: #735D78;
   color: white;
-
+  font-family: 'Livvic', 'sans-serif';
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
 .price{
@@ -43,4 +49,16 @@ Regular 400
 .details{
   font-size: 20px;
   font-weight: bold;
+}
+
+.homepage-btn{
+  background-color: #79C5DD;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Lobster','cursive';
+
+&:hover{
+  background-color: rgb(149, 206, 229);
+  transition: background-color 0.5s;
+}
 }
