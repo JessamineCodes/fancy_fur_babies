@@ -34,10 +34,10 @@ height: 48px;
 align-items: center;
 display: block;
 width: 30px;
-font-family: 'Crimson Text', serif;
 
 &:hover{
-  background-color:#79C5DD;
+  background-color: rgb(149, 206, 229);
   transition: background-color 0.5s;
+  color: #ffffff;
 }
 }
